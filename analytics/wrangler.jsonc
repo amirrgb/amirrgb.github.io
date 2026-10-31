@@ -1,0 +1,35 @@
+{
+  "name": "amirrajabi-site-analytics",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "amirrajabi-site-analytics",
+      "database_id": "fa703c27-61a6-43de-af40-63e998cd3500"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "RATE",
+      "namespace_id": "104701",
+      "simple": {
+        "limit": 60,
+        "period": 60
+      }
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false
+    },
+    "redact_query_string": true
+  }
+}
